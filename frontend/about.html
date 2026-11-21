@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | HR Churn Analytics</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #0b1220;
+            color: #e5e7eb;
+            font-family: Arial, sans-serif;
+        }
+
+        .app-sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #111c30;
+            padding: 30px 20px;
+            border-right: 1px solid #26354d;
+        }
+
+        .app-sidebar h4 {
+            color: #11c5e8;
+            margin-bottom: 35px;
+        }
+
+        .app-sidebar a {
+            display: block;
+            color: #aab7ca;
+            text-decoration: none;
+            padding: 13px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .app-sidebar a:hover,
+        .app-sidebar a.active {
+            background: #1e304b;
+            color: #11c5e8;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 40px;
+        }
+
+        .page-card {
+            background: #17243a;
+            border: 1px solid #293a55;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .page-title {
+            color: white;
+            font-weight: 700;
+        }
+
+        .section-title {
+            color: #11c5e8;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .description {
+            color: #aab7ca;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: #11c5e8;
+            font-weight: bold;
+        }
+
+        .stat-box {
+            background: #22334d;
+            border-radius: 12px;
+            padding: 22px;
+            height: 100%;
+        }
+
+        .stat-number {
+            color: #11c5e8;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .app-sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<aside class="app-sidebar">
+    <h4>HR Analytics</h4>
+
+    <a href="index.html">Dashboard</a>
+    <a href="predict.html">Predict Churn</a>
+    <a href="evaluation.html">Model Evaluation</a>
+    <a href="history.html">History</a>
+    <a href="about.html" class="active">About</a>
+</aside>
+
+<main class="main-content">
+
+    <div class="mb-4">
+        <h2 class="page-title">About the Project</h2>
+        <p class="text-secondary">
+            An intelligent machine learning system for employee attrition analysis.
+        </p>
+    </div>
+
+    <section class="page-card">
+        <h4 class="section-title">Project Overview</h4>
+
+        <p class="description">
+            Employee attrition is an important challenge for organizations.
+            Losing employees can increase recruitment costs, affect productivity,
+            and impact organizational performance.
+        </p>
+
+        <p class="description">
+            This project develops a machine learning-based HR analytics system
+            that predicts whether an employee is likely to leave an organization
+            using employee-related information.
+        </p>
+
+        <p class="description">
+            The application compares <span class="highlight">21 machine learning
+            experiments</span> using three data sampling strategies and seven
+            classification algorithms.
+        </p>
+    </section>
+
+    <section class="page-card">
+        <h4 class="section-title">Project Highlights</h4>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <div class="stat-number">21</div>
+                    <p class="description mb-0">Machine Learning Experiments</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <div class="stat-number">7</div>
+                    <p class="description mb-0">Classification Algorithms</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <div class="stat-number">3</div>
+                    <p class="description mb-0">Sampling Strategies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-card">
+        <h4 class="section-title">Machine Learning Approach</h4>
+
+        <p class="description">
+            The project evaluates three sampling strategies:
+        </p>
+
+        <ul class="description">
+            <li>BASE – Original imbalanced training dataset</li>
+            <li>SMOTE – Synthetic Minority Over-sampling Technique</li>
+            <li>SMOTE-ENN – Combined over-sampling and data cleaning</li>
+        </ul>
+
+        <p class="description">
+            Seven classification algorithms are evaluated under each strategy:
+        </p>
+
+        <ul class="description">
+            <li>Logistic Regression</li>
+            <li>K-Nearest Neighbors</li>
+            <li>Support Vector Classifier</li>
+            <li>Decision Tree</li>
+            <li>Random Forest</li>
+            <li>AdaBoost</li>
+            <li>XGBoost</li>
+        </ul>
+    </section>
+
+    <section class="page-card">
+        <h4 class="section-title">Automatic Model Selection</h4>
+
+        <p class="description">
+            The application automatically selects the experiment with the
+            highest F1-score among all 21 evaluated experiments.
+        </p>
+
+        <p class="description">
+            The selected experiment is used to generate employee churn
+            predictions. The prediction page displays the predicted outcome,
+            churn probability, selected experiment, and its F1-score.
+        </p>
+
+        <p class="description">
+            Current selected experiment:
+            <span class="highlight">BASE - Random Forest</span>
+        </p>
+
+        <p class="description mb-0">
+            Selected F1-score:
+            <span class="highlight">97.34%</span>
+        </p>
+    </section>
+
+    <section class="page-card">
+        <h4 class="section-title">Technology Stack</h4>
+
+        <ul class="description mb-0">
+            <li>Python – Machine Learning and backend programming</li>
+            <li>Scikit-learn – Machine Learning algorithms and evaluation</li>
+            <li>Imbalanced-learn – Sampling techniques</li>
+            <li>XGBoost – Gradient boosting classification</li>
+            <li>FastAPI – Backend API development</li>
+            <li>HTML, CSS, JavaScript and Bootstrap – Frontend</li>
+            <li>MongoDB – Prediction history storage (optional connection)</li>
+        </ul>
+    </section>
+
+</main>
+
+</body>
+</html>

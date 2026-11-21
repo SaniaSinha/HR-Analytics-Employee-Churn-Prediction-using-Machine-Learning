@@ -1,0 +1,475 @@
+
+/* =====================================================
+   HR ANALYTICS - PREMIUM DARK THEME
+===================================================== */
+
+:root {
+    --bg-primary: #0b1120;
+    --bg-secondary: #111c2e;
+    --bg-card: #172338;
+    --bg-hover: #1e304a;
+
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+
+    --success: #34d399;
+    --warning: #fbbf24;
+    --danger: #fb7185;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --border-color: #26364d;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    background: #0d1728 !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: var(--text-primary) !important;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    margin-left: 12px;
+    transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* =====================================================
+   HEADINGS AND TEXT
+===================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 14px !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    border-color: #36516f !important;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn-primary {
+    background: var(--accent-hover) !important;
+    border: none !important;
+    color: #07111e !important;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: var(--accent) !important;
+}
+
+.btn-outline-primary {
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+.btn-outline-primary:hover {
+    background: var(--accent) !important;
+    color: #07111e !important;
+}
+
+.btn-success {
+    background: #059669 !important;
+    border: none !important;
+}
+
+.btn-danger {
+    background: #e11d48 !important;
+    border: none !important;
+}
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+.form-control,
+.form-select {
+    background-color: #0d192b !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 11px 13px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
+}
+
+.form-control::placeholder {
+    color: #64748b !important;
+}
+
+.form-label {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+}
+
+/* =====================================================
+   TABLES
+===================================================== */
+
+.table {
+    --bs-table-color: #e5e7eb;
+    --bs-table-bg: #17243a;
+    --bs-table-border-color: #40516d;
+    --bs-table-striped-color: #ffffff;
+    --bs-table-hover-color: #ffffff;
+
+    color: #e5e7eb !important;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #263b59 !important;
+    color: #19d5f5 !important;
+    border-color: #40516d !important;
+    font-weight: 700;
+}
+
+.table td {
+    background-color: #17243a !important;
+    color: #ffffff !important;
+    border-color: #40516d !important;
+}
+
+.table tbody tr:hover td {
+    background-color: #223651 !important;
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   BADGES
+===================================================== */
+
+.badge {
+    font-weight: 600;
+    padding: 7px 10px;
+}
+
+/* =====================================================
+   ALERTS
+===================================================== */
+
+.alert-info {
+    background: #102a43 !important;
+    color: #7dd3fc !important;
+    border-color: #164e70 !important;
+}
+
+.alert-danger {
+    background: #3b1724 !important;
+    color: #fda4af !important;
+    border-color: #881337 !important;
+}
+
+.alert-success {
+    background: #103329 !important;
+    color: #6ee7b7 !important;
+    border-color: #065f46 !important;
+}
+
+/* =====================================================
+   MODALS AND DROPDOWNS
+===================================================== */
+
+.dropdown-menu {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dropdown-item {
+    color: var(--text-primary) !important;
+}
+
+.dropdown-item:hover {
+    background: var(--bg-hover) !important;
+}
+
+.modal-content {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* =====================================================
+   CHECKBOXES AND SELECT OPTIONS
+===================================================== */
+
+.form-check-input {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+option {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+/* =====================================================
+   CHART CONTAINERS
+===================================================== */
+
+canvas {
+    max-width: 100%;
+}
+
+/* =====================================================
+   CUSTOM LAYOUT UTILITIES
+===================================================== */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.stat-value {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.accent-text {
+    color: var(--accent) !important;
+}
+
+.success-text {
+    color: var(--success) !important;
+}
+
+.warning-text {
+    color: var(--warning) !important;
+}
+
+.danger-text {
+    color: var(--danger) !important;
+}
+
+hr {
+    border-color: var(--border-color);
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar-brand {
+        font-size: 19px;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+}
+
+/* =====================================================
+   MODEL EVALUATION PAGE
+===================================================== */
+
+.main-content {
+    color: var(--text-primary);
+}
+
+.main-content h2,
+.main-content h4,
+.main-content h5 {
+    color: var(--text-primary) !important;
+}
+
+.main-content .card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 14px !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.main-content .card-body {
+    padding: 24px;
+}
+
+.main-content .text-muted {
+    color: var(--text-secondary) !important;
+}
+
+/* Evaluation comparison tables */
+
+.main-content .table {
+    --bs-table-color: #f8fafc;
+    --bs-table-bg: #172338;
+    --bs-table-border-color: #40516d;
+    --bs-table-hover-bg: #1e304a;
+    --bs-table-hover-color: #ffffff;
+
+    color: #f8fafc !important;
+    vertical-align: middle;
+}
+
+.main-content .table thead th {
+    background: #263b59 !important;
+    color: #38bdf8 !important;
+    border-color: #40516d !important;
+    padding: 14px;
+    white-space: nowrap;
+}
+
+.main-content .table tbody td {
+    background: #172338 !important;
+    color: #f8fafc !important;
+    border-color: #40516d !important;
+    padding: 13px;
+}
+
+.main-content .table tbody tr:hover td {
+    background: #1e304a !important;
+}
+
+/* Experiment selector */
+
+.main-content .form-select {
+    background-color: #0d192b !important;
+    color: #f8fafc !important;
+    border-color: #40516d !important;
+}
+
+/* ROC chart */
+
+#rocChart {
+    width: 100% !important;
+    max-height: 430px;
+}
+
+/* Confusion matrix */
+
+#confusionMatrix table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#confusionMatrix th,
+#confusionMatrix td {
+    padding: 16px;
+    border: 1px solid #40516d;
+    background: #172338;
+    color: #f8fafc !important;
+}
+
+#confusionMatrix th {
+    background: #263b59;
+    color: #38bdf8 !important;
+    font-weight: 700;
+}
+
+#confusionMatrix td {
+    font-weight: 600;
+}
