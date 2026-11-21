@@ -1,4 +1,4 @@
-:::writing{variant="document" id="73192"}
+
 # HR Analytics: Employee Churn Prediction Using Machine Learning
 
 An end-to-end Machine Learning application that predicts employee attrition using HR data. The project compares multiple machine learning algorithms and sampling techniques to identify the best-performing model for employee churn prediction.
